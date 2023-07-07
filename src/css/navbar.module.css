@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header-left h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  background-color: #20232a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 4rem;
+  color: #fff;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+}
+
+.user_name{
+    font-size: 1.2rem;
+}
+
+.header-left h1 {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.checkBtn {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.checkBtn {
+  cursor: pointer;
+  font-size: 30px;
+  float: right;
+  color: #ed1e79;
+  line-height: 80px;
+}
+
+.header-right ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-right ul li a, .header-right ul li span {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.header-right ul li a:hover, .header-right ul li span:hover {
+  background-color: #fff;
+  border-radius: 7px;
+  color: rgb(22, 7, 36);
+}
+
+.user_icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 0%;
+  display: flex;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 805px) {
+  .header-list {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(22, 7, 36);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 4rem;
+    left: 100%;
+    transition: all 1s;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .checkBtn {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+}
